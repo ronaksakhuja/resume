@@ -20,6 +20,12 @@ jobs:
       with:
         name: PDF
         path: ronak_sakhuja_resume.pdf
+    - name: Git add
+      run: git add ronak_sakhuja_resume.pdf
+    - name: Git commit
+      run: git commit -m "update resume"
+    - name: Git push
+      run: git push
 #     - name: Create Pull Request
 #       uses: peter-evans/create-pull-request@v1.6.1
 #       env:

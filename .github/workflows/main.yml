@@ -16,13 +16,10 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: ronak_sakhuja_resume.tex
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      if: startsWith(github.ref, 'refs/tags/')
+    - uses: actions/upload-artifact@v2
       with:
-        files: ronak_sakhuja_resume.pdf
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: PDF
+        path: ronak_sakhuja_resume.pdf
 #     - name: Create Pull Request
 #       uses: peter-evans/create-pull-request@v1.6.1
 #       env:

@@ -15,11 +15,11 @@ jobs:
     - name: Compile LaTeX document
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: resume_ronak_sakhuja.tex
+        root_file: ronak_sakhuja_resume.tex
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        files: resume_ronak_sakhuja.pdf
+        files: ronak_sakhuja_resume.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #     - name: Create Pull Request

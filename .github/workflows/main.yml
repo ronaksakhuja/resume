@@ -1,12 +1,13 @@
-name: Build LaTeX document
-on: [push]
+name: Document Conversion
+
+on: push
+
 jobs:
-  build_latex:
-    runs-on: ubuntu-latest
+  convert_via_pandoc:
+    name: Convert via Pandoc
+    runs-on: ubuntu-18.04
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
-      - name: Compile LaTeX document
-        uses: dante-ev/latex-action@latest
+      - uses: actions/checkout@v1
+      - uses: docker://pandoc/latex:2.9
         with:
-          root_file: ronak_sakhuja_resume.tex
+          args: "--help"

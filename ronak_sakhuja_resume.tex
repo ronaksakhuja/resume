@@ -1,0 +1,196 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-6pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://sourabhbajaj.com/}{\Large Ronak Sakhuja}} & Email : \href{mailto:ronaksakhuja@gmail.com}{ronaksakhuja@gmail.com}\\
+  \ & Mobile : +91-7838822862 \\
+\end{tabular*}
+{I believe to solve all problems through code, and I that's what I do.}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Delhi Technological University}{Delhi, India}
+      {Bachelor of Technology in Computer Science; (8.71/10.0)}{Aug. 2016 -- June. 2020}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Microsoft}{Hyderabad, India}
+      {Software Engineer}{June 2020 - Present}
+      \resumeItemListStart
+        \resumeItem{OSDU}
+          {The OSDU is an industry forum that enables the Energy industry to collaborate on the development of transformational technology to support the world’s changing and evolving Energy needs.}
+          \\\textbullet
+          { Working as backend developer to enable Oil and Gas companies to use OSDU with Microsoft Azure as cloud provider. Tech Stack : Sprint Boot, kubernetes and docker}
+        \resumeItem{Dynamics 365}
+        {Microsoft Dynamics 365 is a cloud-based business applications platform that combines components of CRM and ERP with AI capabilities.}
+          \newline
+          \textbullet
+          { Primarily responsible for stabilising Service Level Agreements feature, owned bug fixes for Migration of SLA from legacy to Unified Interface.}
+          \newline
+          \textbullet
+          { Created Unit test mechanism for SLA Migration and integrated it with build pipeline.}
+          \newline
+          \textbullet
+          { Worked on supportable for Unified Service Desk and Service Level Agreements}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Microsoft}{Bangalore, India}
+      {Software Engineering Intern}{May 2019 - July 2019}
+      \resumeItemListStart
+        \resumeItem{Omnichannel Migration Framework}
+          {Developed a framework used by PMs, to setup their Omnichannel configurations automatically, copying data,users and configurations from one CRM instance to another.}
+          \newline
+          {This automation reduced a PM's work from 6 hours to 10 minutes to setup an environment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Le Jensoft}{India}
+      {Summer Intern}{May 2018 - July 2018}
+      \resumeItemListStart
+        \resumeItem{Full Stack Development}
+          {Created a health portal for a BCIT incubated startup }.
+          \newline\textbullet
+          { Responsible for designing UI and backend for CRUD operations. Worked on PHP Codeigniter framework.}
+      \resumeItemListEnd
+      
+%         \resumeSubheading
+%       {Central Industrial Security Forces}{India}
+%       {Winter Android Developer Intern}{Dec 2016 - Jan 2017}
+%       \resumeItemListStart
+%         \resumeItem{Internal Chat App}
+%           {The Central Industrial Security Force is a Central Armed Police Force in India. }.
+%           \newline\textbullet
+%           { Responsible for the development of Application used for internal messaging in CISF on PHP backend using RESTful APIs.}
+%       \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{GeekAssistant (Deprecated)}
+      {Developed a chrome plugin and a web portal to track their progress on geeksforgeeks.org,leetcode,codechef and codeforces with a 1000+ user base.}
+      \\[0.5em]\textbullet
+      {It provides a common portal to track your progress on different coding websites. Users have option to mark bookmark a question, set a difficulty and write notes.}
+    \resumeSubItem{DTU Farewell}
+      {We were the 1st batch of the pandemic, and needed an online farewell.}
+      \\[0.5em]\textbullet
+      { Created a portal for 3000 students of our batch to login and post scribbles on each other's profiles, give them a title, like posts, post a photo on a photowall.}
+      \\[0em]\textbullet
+      { Userbase : 2000+, Techstack : PHP(codeigniter),js,bootstrap}
+    \resumeSubItem{Sarcar}
+      {Android Application for Smart Vehicles, Intuited a way for vehicles to interact with each other by the concept of cognitive radio.Predictions of next location was made using LSTM to predict accidents.}
+      \\[0.5em]
+      \textbullet{ Tech Stack : Android(Java, XML) and Firebase for backend, Python for Machine Learning.}
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+    \resumeSubHeadingListStart
+    \resumeSubItem
+    {Microsoft Asia Summit 2019}
+    {Selected among top 20 students out of 1500 across Asia Pacific Region for Microsoft Asia Summit 2019and the Ignite Tour, Sydney fully sponsored by Microsoft.}
+    \resumeSubItem
+    {1st Prize : Smart India Hackathon 2016}
+    {Android App for navigation of blind people using Camera stereo-vision.}
+    \resumeSubItem
+    {2nd Prize, Microsoft MSHack}
+    { Made a realtime bidding system for advertisements based on Azure Cognitive Services.}
+    \resumeSubItem
+    {Microsoft API Prize at Hack The North}
+    {Won XBOX One S and Prioritised entry to Imagine Cup}
+    \resumeSubItem
+    {1st Prize at Clash Hacks}
+    {Android Application for a teacher to analyse classroom in realtime using Azure cognitive API}
+    \resumeSubHeadingListEnd
+\section{Publications}
+    \resumeSubHeadingListStart
+        \resumeSubItem
+        {Object Detection in Foggy Conditions by Fusion of Saliency Map and YOLO}
+        {Ronak Sakhuja, Sarthak Katyal, Sanjay Kumar, and Samarth Gupta “Object Detection in Foggy Conditions by  Fusion  of  Saliency  Map  and  YOLO”  paper  presented  in  Twelfth  International  Conference  on  Sensing Technology at University of Limerick, Ireland, ISBN :978-1-5386-5147-6/18 © 2018 IEEE }
+    \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}

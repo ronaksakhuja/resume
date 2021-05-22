@@ -22,10 +22,10 @@ jobs:
         path: ronak_sakhuja_resume.pdf
     - name: Git add
       run: git add ronak_sakhuja_resume.pdf
-    - name: Git commit
-      run: git commit -m "update resume"
-    - name: Git push
-      run: git push
+    - name: Commit & Push changes
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
 #     - name: Create Pull Request
 #       uses: peter-evans/create-pull-request@v1.6.1
 #       env:

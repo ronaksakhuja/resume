@@ -30,7 +30,7 @@ jobs:
                   root_file: ronak_sakhuja_resume.tex
 
             - name: Git add
-              run: git add ronak_sakhuja_resume.pdf
+              run: git add .
               
             - uses: actions/checkout@v2
               with:

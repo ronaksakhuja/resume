@@ -1,38 +1,46 @@
-name: Convert PDF to Markdown
-
+name: Compile and upload résumé PDF
 on:
-  push
+    push:
+        branches:
+            - "master"
+        paths:
+            - "resume.tex"
+            - "index.html"
+            - ".github/workflows/**"
+    pull_request:
+        branches:
+            - "master"
+        paths:
+            - "resume.tex"
+            - "index.html"
+            - ".github/workflows/**"
 
 jobs:
-  convert_md: 
-    runs-on: ubuntu-latest
-    steps:
-    # We must checkout the latest version of the code to get a copy of all .md files
-    - name: Checkout Code
-      uses: actions/checkout@v2.0.0
-      with:
-        fetch-depth: 1
-    - name: Compile LaTeX document
-      uses: xu-cheng/latex-action@v2
-      with:
-        root_file: ronak_sakhuja_resume.tex
-    - uses: actions/upload-artifact@v2
-      with:
-        name: PDF
-        path: ronak_sakhuja_resume.pdf
-    - name: Git add
-      run: git add ronak_sakhuja_resume.pdf
-    - name: Commit & Push changes
-      uses: actions-js/push@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-#     - name: Create Pull Request
-#       uses: peter-evans/create-pull-request@v1.6.1
-#       env:
-#         # The token is built in to actions. No config required.
-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         COMMIT_MESSAGE: Add .pdf files.
-#         PULL_REQUEST_TITLE: Add .pdf files.
-#         PULL_REQUEST_BRANCH: pdf-add
-#         PULL_REQUEST_BODY: Here's the PDF File
-#         PULL_REQUEST_REVIEWERS: scottypate
+    build_latex:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  persist-credentials: false
+
+            - name: Compile LaTeX document
+              uses: xu-cheng/latex-action@v2
+              with:
+                  root_file: resume.tex
+
+            - name: Post Processing
+              run: |
+                  mkdir build 
+                  cp *.pdf build/ 
+                  cp index.html build/
+                  
+            - name: Git add
+              run: git add resume.pdf
+              
+            - name: Deploy to GitHub Pages
+              uses: JamesIves/github-pages-deploy-action@4.1.4
+              with:
+                  BRANCH: gh-pages
+                  FOLDER: build
+                  CLEAN: true

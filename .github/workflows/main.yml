@@ -29,12 +29,6 @@ jobs:
               with:
                   root_file: ronak_sakhuja_resume.tex
 
-            - name: Post Processing
-              run: |
-                  mkdir build 
-                  cp *.pdf build/ 
-                  cp index.html build/
-                  
             - name: Git add
               run: git add ronak_sakhuja_resume.pdf
               

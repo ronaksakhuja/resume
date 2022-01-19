@@ -3,7 +3,7 @@
 % Author : Sourabh Bajaj
 % Website: https://github.com/sb2nov/resume
 % License : MIT
-%-----------------------
+%------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -76,7 +76,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{http://ronaksakhuja.github.io/}{\Large Ronak Sakhuja}} & Email : \href{mailto:ronaksakhuja@gmail.com}{ronaksakhuja@gmail.com}\\
-  \ & Mobile : +91-7838822862 \\
+  \ & Mobile : +1-(236) 994-7453 \\
 \end{tabular*}
 
 %-----------EDUCATION-----------------
@@ -85,35 +85,41 @@
     \resumeSubheading
       {Delhi Technological University}{Delhi, India}
       {Bachelor of Technology in Computer Science; (8.71/10.0)}{Aug. 2016 -- June. 2020}
-    \resumeSubheading
-      {Sachdeva Public School}{Delhi, India}
-      {Class 12th AISSCE; 97\% }{March. 2015 - May 2016}
+   
   \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Microsoft}{Hyderabad, India}
-      {Software Engineer}{June 2020 - Present}
+      {Article.com}{Vancouver, Canada}
+      {Software Engineer Part-Time}{Jan 2021 - Present}
+      \resumeItemListStart
+        \resumeItem{Fulfilment Logic}
+          {Optimizing ETA logic in Java Spring Boot for fulfilling orders of article.com faster to customers.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Microsoft IDC}{Hyderabad, India}
+      {Software Engineer}{June 2020 - December 2021}
       \resumeItemListStart
         \resumeItem{Open Energy Platform}
           {The OEP-OSDU is an industry forum that enables the Energy industry to collaborate on the development of transformational technology to support the world’s changing and evolving Energy needs.}
           \\\textbullet
-          { Working as backend developer to enable Oil and Gas companies to use OSDU with Microsoft Azure as cloud provider. Tech Stack : Sprint Boot, kubernetes and docker}
+          { Building Azure OEP PaaS to enable Oil and Gas companies to use OSDU on Azure. Tech Stack : Sprint Boot, kubernetes and docker}
           \\\textbullet
-          {Key responsibilities include: Making micro-services resilient to handle failures across other services and infrastructure resources by using circuitbreakers, retries and timeouts effectively.}
+          {Improved resiliency of microservices to handle failures across other services and infrastructure resources by using circuitbreakers, retries, timeouts and identifying and mitigating single points of failures.}
+          \\\textbullet
+          {Designed,built and integrated CI/CD pipelines for build test and release of nightly builds to dev test and prod environments.}
 
         \resumeItem{Dynamics 365}
         {Microsoft Dynamics 365 is a cloud-based business applications platform that combines components of CRM and ERP with AI capabilities.}
           \newline
           \textbullet
-          { Primarily responsible for stabilising Service Level Agreements feature, fixed 93\% of customer issues by detecting and fixing them before shipping.}
+          { Analysed,  identified and fixed issues with SLA Migration feature for 94\% customers before launch through proactive monitoring of logs.}
           \newline
           \textbullet
-          { Created testing mechanism for SLA Migration and integrated it with build pipeline.}
+          { Built integrated test mechanism for SLA Migration and automated it with build pipeline.}
       \resumeItemListEnd
     \resumeSubheading
       {Microsoft}{Bangalore, India}
@@ -122,18 +128,18 @@
         \resumeItem{Omnichannel Migration Framework}
           {Developed a framework used by PMs, to setup their Omnichannel configurations automatically, copying data,users and configurations from one CRM instance to another.}
           \newline
-          {This automation reduced a PM's work from 6 hours to 10 minutes to setup an environment.}
+          {This automation reduced a PM's work from 10 hours to 10 minutes to setup an environment.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Le Jensoft}{India}
-      {Summer Intern}{May 2018 - July 2018}
-      \resumeItemListStart
-        \resumeItem{Full Stack Development}
-          {Created a health portal for a BCIT incubated startup }.
-          \newline\textbullet
-          { Responsible for designing UI and backend for CRUD operations. Worked on PHP Codeigniter framework.}
-      \resumeItemListEnd
+%     \resumeSubheading
+%       {Le Jensoft}{India}
+%       {Summer Intern}{May 2018 - July 2018}
+%       \resumeItemListStart
+%         \resumeItem{Full Stack Development}
+%           {Created a health portal for a BCIT incubated startup }.
+%           \newline\textbullet
+%           { Responsible for designing UI and backend for CRUD operations. Worked on PHP Codeigniter framework.}
+%       \resumeItemListEnd
       
 %         \resumeSubheading
 %       {Central Industrial Security Forces}{India}
@@ -148,7 +154,7 @@
 
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Projects    \href{https://ronaksakhuja.github.io/projects.html}{(URL)}}
   \resumeSubHeadingListStart
     \resumeSubItem{GeekAssistant (Deprecated)}
       {Developed a chrome plugin and a web portal to track their progress on geeksforgeeks.org,leetcode,codechef and codeforces with a 1000+ user base.}
@@ -160,10 +166,10 @@
       { Created a portal for 3000 students of our batch to login and post scribbles on each other's profiles, give them a title, like posts, post a photo on a photowall.}
       \\[0em]\textbullet
       { Userbase : 2000+, Techstack : PHP(codeigniter),js,bootstrap}
-    \resumeSubItem{Sarcar}
-      {Android Application for Smart Vehicles, Intuited a way for vehicles to interact with each other by the concept of cognitive radio.Predictions of next location was made using LSTM to predict accidents.}
-      \\[0.8em]
-      \textbullet{ Tech Stack : Android(Java, XML) and Firebase for backend, Python for Machine Learning.}
+    % \resumeSubItem{Sarcar}
+    %   {Android Application for Smart Vehicles, Intuited a way for vehicles to interact with each other by the concept of cognitive radio.Predictions of next location was made using LSTM to predict accidents.}
+    %   \\[0.8em]
+    %   \textbullet{ Tech Stack : Android(Java, XML) and Firebase for backend, Python for Machine Learning.}
 %     \resumeSubItem{Mac Setup}
 %       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
   \resumeSubHeadingListEnd
@@ -171,20 +177,20 @@
 \section{Achievements}
     \resumeSubHeadingListStart
     \resumeSubItem
+    {Winner at Hack The North, University of Waterloo}
+    {Made a real time bidding system for advertisements based on Azure Cognitive Services}
+    \resumeSubItem
+    {1st Prize : Smart India Hackathon 2016}
+    {World's biggest hackathon hosted by Government of India. Developed Android App for navigation of blind people using Camera stereo-vision.}
+    \resumeSubItem
     {Microsoft Asia Summit 2019}
     {Selected among top 20 students out of 1500 across Asia Pacific Region for Microsoft Asia Summit 2019and the Ignite Tour, Sydney fully sponsored by Microsoft.}
     \resumeSubItem
-    {1st Prize : Smart India Hackathon 2016}
-    {Android App for navigation of blind people using Camera stereo-vision.}
-    \resumeSubItem
     {2nd Prize, Microsoft MSHack}
-    { Made a realtime bidding system for advertisements based on Azure Cognitive Services.}
-    \resumeSubItem
-    {Microsoft Prize at Hack The North, University of Waterloo}
-    {Won priortized entry to Imagine Cup}
+    { Won prioritized entry at Imagine Cup hosted by Microsoft.}
     \resumeSubItem
     {1st Prize at Clash Hacks}
-    {Android Application for a teacher to analyse classroom in realtime using Azure cognitive API}
+    {Android Application for a teacher to analyse classroom in real time using Azure cognitive API}
     \resumeSubHeadingListEnd
 \section{Publications}
     \resumeSubHeadingListStart
